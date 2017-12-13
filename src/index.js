@@ -1,8 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
+import Article from './Article';
+import {articles} from './resourse';
 
-function HelloWorld() {
-    return <h1>Hello</h1>
-}
+const article = articles[0];
 
-render (<HelloWorld />, document.getElementById('container'));
+render(<Article article={article} foo={'bar text'}/>, document.getElementById('container'));

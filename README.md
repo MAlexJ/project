@@ -1,22 +1,34 @@
 **Creating a New Application**
 
+<br>
+
 Installing React JS:
 
 `npm init`
 
 `npm install --save react react-dom`
 
+<br>
+
 Install webpack:
 
 `npm install --save webpack`
+
+<br>
 
 Install webpack-dev-server:
 
 `npm install webpack-dev-server --save`
 
+_config script: "start": "webpack-dev-server --hot --inline",_
+
+<br>
+
 **Installation Babel for webpack:**
 
 `npm install --save babel-loader babel-core`
+
+<br>
 
 Create `.babelrc` configuration file:
 
