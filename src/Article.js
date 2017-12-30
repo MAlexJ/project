@@ -4,6 +4,8 @@ import React, {Component} from 'react'
 export default class Article extends Component {
 
     constructor(props) {
+
+        // pass props to component
         super(props);
 
         // create >>> state
@@ -30,7 +32,7 @@ export default class Article extends Component {
         return (
             <div>
                 <h3>{article.title}</h3>
-                <button onClick={this.clickOnButton}>Open</button>
+                <button onClick={this.clickOnButton}>{isOpen ? 'Close' : 'Open'}</button>
                 {showArticleText}
             </div>
         )
