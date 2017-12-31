@@ -38,6 +38,10 @@ Create `.babelrc` configuration file:
 
 `npm install --save-dev babel-preset-stage-0`
 
+**react-router-dom**
+
+npm install --save react-router-dom
+
 
 
 
