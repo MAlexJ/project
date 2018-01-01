@@ -3,30 +3,37 @@ import {Link, Route, BrowserRouter} from 'react-router-dom'
 import Home from './Home';
 import Topics from './Topics';
 import About from './About';
-import Button from 'material-ui/Button';
+import {Nav, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+
 
 class BasicExample extends Component {
     render() {
         return (
-            <BrowserRouter>
-                <div>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/topics">Topics</Link></li>
-                    </ul>
-
-                    <Button raised color="primary">
-                        Hello World
-                    </Button>
-
-                    <hr/>
-
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/topics" component={Topics}/>
-                </div>
-            </BrowserRouter>
+            <Navbar inverse collapseOnSelect fixedTop>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="#">React-Bootstrap</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle/>
+                </Navbar.Header>
+                <Navbar.Collapse>
+                    <Nav>
+                        <NavItem eventKey={1} href="#">Link</NavItem>
+                        <NavItem eventKey={2} href="#">Link</NavItem>
+                        <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+                            <MenuItem eventKey={3.1}>Action</MenuItem>
+                            <MenuItem eventKey={3.2}>Another action</MenuItem>
+                            <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                            <MenuItem divider/>
+                            <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                        </NavDropdown>
+                    </Nav>
+                    <Nav pullRight>
+                        <NavItem eventKey={1} href="#">Link Right</NavItem>
+                        <NavItem eventKey={2} href="#">Link Right</NavItem>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 }
