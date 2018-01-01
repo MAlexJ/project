@@ -42,6 +42,10 @@ Create `.babelrc` configuration file:
 
 npm install --save react-router-dom
 
+**Material-UI**
+https://material-ui-next.com/
+npm install --save material-ui@next
+npm install --save material-ui-icons
 
 
 

@@ -3,6 +3,7 @@ import {Link, Route, BrowserRouter} from 'react-router-dom'
 import Home from './Home';
 import Topics from './Topics';
 import About from './About';
+import Button from 'material-ui/Button';
 
 class BasicExample extends Component {
     render() {
@@ -14,6 +15,10 @@ class BasicExample extends Component {
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/topics">Topics</Link></li>
                     </ul>
+
+                    <Button raised color="primary">
+                        Hello World
+                    </Button>
 
                     <hr/>
 
